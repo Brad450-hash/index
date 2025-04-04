@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="css/work17.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Media/business.jpg"class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>
+                    Hi I'm <span>BRADLEY</span>From <br>
+                    Africa.
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Media/person8.jpg">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, praesentium consequatur cumque accusantium, aspernatur ad animi numquam tenetur eligendi nam voluptatibus vitae, nemo esse velit? Numquam debitis ut mollitia? Explicabo?
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                        skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                        Education
+                        </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing Web/app Interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/app Interfaces</li>
+                            <li><span>Front-end Dev</span><br>building android/ios apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>UI/UX</span><br>massss commms</li>
+                            <li><span>Web Development</span><br>Dmasssterrrr coommm cess</li>
+                            <li><span>Front-end Dev</span><br>building android/ios apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestiae ipsam iure pariatur amet ullam doloribus aut quidem? Ipsam fugit, mollitia veniam error quam incidunt quas impedit? Odit, assumenda provident.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>UI/UX</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis impedit magni harum, sint ab eos. Voluptatum, maxime recusandae! Repudiandae quo ea placeat ut labore odio nam eius suscipit magni ipsam.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Front-End</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui velit ad repellat aperiam dolores, consequuntur blanditiis doloremque? Quis, nostrum voluptatum atque quibusdam, corrupti illum maiores expedita earum eaque blanditiis a.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+
+            function opentab(tabname){
+                for (tablink of tablinks){
+                    tablink.classlist.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classlist.remove("active-link");
+                }
+                event.currenttarget.classlist.add("active-link");
+                document.getElementById(tabname).classlist.add("active-tab")
+            }
+            </script>
+</body>
+</html>
